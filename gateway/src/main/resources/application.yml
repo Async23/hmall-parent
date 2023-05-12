@@ -18,7 +18,5 @@ spring:
             - Path=/order/**
           uri: lb://orderservice
 logging:
-  level:
-    cn.itcast: debug
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
