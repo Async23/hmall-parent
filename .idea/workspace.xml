@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb36ec71-85f8-4bd2-b047-d9e9516dbd02" name="Changes" comment="RabbitMQ 整合完成">
+    <list default="true" id="eb36ec71-85f8-4bd2-b047-d9e9516dbd02" name="Changes" comment="注册 orderservice、userservice、gateway 到 dev 命名空间">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application1111.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,9 +167,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.GatewayApplication" />
         <item itemvalue="Spring Boot.UserServiceApplication" />
         <item itemvalue="Spring Boot.OrderServiceApplication" />
+        <item itemvalue="Spring Boot.GatewayApplication" />
         <item itemvalue="JUnit.MapperTest.test" />
       </list>
     </recent_temporary>
@@ -188,7 +186,7 @@
       <workItem from="1683816447844" duration="1597000" />
       <workItem from="1683852739325" duration="643000" />
       <workItem from="1683878435343" duration="11609000" />
-      <workItem from="1683891851719" duration="1550000" />
+      <workItem from="1683891851719" duration="1854000" />
     </task>
     <task id="LOCAL-00001" summary="user-service 创建完成">
       <created>1683879506838</created>
@@ -246,7 +244,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683891692900</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="注册 orderservice、userservice、gateway 到 dev 命名空间">
+      <created>1683893911811</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683893911811</updated>
+    </task>
+    <task id="LOCAL-00010" summary="注册 orderservice、userservice、gateway 到 dev 命名空间">
+      <created>1683894042707</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683894042707</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,6 +283,7 @@
     <MESSAGE value="feign 集成完成" />
     <MESSAGE value="gateway 网关配置完成" />
     <MESSAGE value="RabbitMQ 整合完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="RabbitMQ 整合完成" />
+    <MESSAGE value="注册 orderservice、userservice、gateway 到 dev 命名空间" />
+    <option name="LAST_COMMIT_MESSAGE" value="注册 orderservice、userservice、gateway 到 dev 命名空间" />
   </component>
 </project>
