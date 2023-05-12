@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb36ec71-85f8-4bd2-b047-d9e9516dbd02" name="Changes" comment="注册 orderservice、userservice、gateway 到 dev 命名空间">
+    <list default="true" id="eb36ec71-85f8-4bd2-b047-d9e9516dbd02" name="Changes" comment="application.yml 配置文件回退，方便调试">
+      <change afterPath="$PROJECT_DIR$/feign-api/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application1111.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/itheima/client/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/itheima/client/UserClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,13 +65,15 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelOrder2": "2",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
+    "RequestMappingsPanelWidth2": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/code/hmall-parent/common/src/main/java",
+    "last_opened_file_path": "D:/code/hmall-parent/user-service/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -90,6 +96,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\hmall-parent\user-service\src\main\resources" />
       <recent name="D:\code\hmall-parent\common\src\main\java" />
       <recent name="D:\code\hmall-parent\order-service\src\main\resources" />
     </key>
@@ -167,9 +174,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.UserServiceApplication" />
         <item itemvalue="Spring Boot.OrderServiceApplication" />
         <item itemvalue="Spring Boot.GatewayApplication" />
+        <item itemvalue="Spring Boot.UserServiceApplication" />
         <item itemvalue="JUnit.MapperTest.test" />
       </list>
     </recent_temporary>
@@ -186,7 +193,7 @@
       <workItem from="1683816447844" duration="1597000" />
       <workItem from="1683852739325" duration="643000" />
       <workItem from="1683878435343" duration="11609000" />
-      <workItem from="1683891851719" duration="1854000" />
+      <workItem from="1683891851719" duration="3919000" />
     </task>
     <task id="LOCAL-00001" summary="user-service 创建完成">
       <created>1683879506838</created>
@@ -258,7 +265,28 @@
       <option name="project" value="LOCAL" />
       <updated>1683894042707</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="迁移 orderservice 和 userservice 的 application.yml 中的所有内容到 nacos 配置中心中">
+      <created>1683894479015</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1683894479015</updated>
+    </task>
+    <task id="LOCAL-00012" summary="迁移 orderservice 和 userservice 的 application.yml 中的所有内容到 nacos 配置中心中">
+      <created>1683894751582</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1683894751582</updated>
+    </task>
+    <task id="LOCAL-00013" summary="application.yml 配置文件回退，方便调试">
+      <created>1683895054760</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1683895054760</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,6 +312,8 @@
     <MESSAGE value="gateway 网关配置完成" />
     <MESSAGE value="RabbitMQ 整合完成" />
     <MESSAGE value="注册 orderservice、userservice、gateway 到 dev 命名空间" />
-    <option name="LAST_COMMIT_MESSAGE" value="注册 orderservice、userservice、gateway 到 dev 命名空间" />
+    <MESSAGE value="迁移 orderservice 和 userservice 的 application.yml 中的所有内容到 nacos 配置中心中" />
+    <MESSAGE value="application.yml 配置文件回退，方便调试" />
+    <option name="LAST_COMMIT_MESSAGE" value="application.yml 配置文件回退，方便调试" />
   </component>
 </project>

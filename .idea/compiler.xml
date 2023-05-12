@@ -11,12 +11,14 @@
         <module name="order-service" />
         <module name="common" />
         <module name="gateway" />
+        <module name="feign-api" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common" options="-parameters" />
+      <module name="feign-api" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="hmall-parent" options="" />
       <module name="order-service" options="-parameters" />
