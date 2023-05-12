@@ -1,5 +1,6 @@
 package com.itheima.Service;
 
+
 import com.itheima.pojo.User;
 
 public interface UserService {

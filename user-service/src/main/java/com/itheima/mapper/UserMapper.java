@@ -1,7 +1,7 @@
 package com.itheima.mapper;
 
-import com.itheima.pojo.User;
 import org.apache.ibatis.annotations.Mapper;
+import com.itheima.pojo.User;
 
 @Mapper
 public interface UserMapper {

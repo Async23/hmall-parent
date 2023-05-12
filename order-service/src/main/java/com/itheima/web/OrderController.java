@@ -24,4 +24,15 @@ public class OrderController {
     public Order queryById(@PathVariable Long id) {
         return orderService.queryById(id);
     }
+
+    /**
+     * 模拟下单方法
+     *
+     * @param id
+     * @return
+     */
+    @GetMapping("/submit/{id}")
+    public String submit(@PathVariable Long id) {
+        return orderService.submit(id);
+    }
 }

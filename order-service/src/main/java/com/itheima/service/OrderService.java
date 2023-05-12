@@ -11,4 +11,12 @@ public interface OrderService {
      * @return
      */
     Order queryById(Long id);
+
+    /**
+     * 模拟下单方法
+     *
+     * @param id
+     * @return
+     */
+    String submit(Long id);
 }
