@@ -7,14 +7,14 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
-@Component
+// @Component
 public class AuthorizeFilter implements GlobalFilter {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         // 1.获取请求参数
-        MultiValueMap<String, String> params = exchange.getRequest().getQueryParams();
+        MultiValueMap<String, String> headers = exchange.getRequest().getHeaders();
         // 2.获取authorization参数
-        String auth = params.getFirst("authorization");
+        String auth = headers.getFirst("authorization");
         // 3.校验
         if (auth != null) {
             return chain.filter(exchange);

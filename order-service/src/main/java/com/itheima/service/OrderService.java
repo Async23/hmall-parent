@@ -15,8 +15,8 @@ public interface OrderService {
     /**
      * 模拟下单方法
      *
-     * @param id
+     * @param order
      * @return
      */
-    String submit(Long id);
+    String submit(Order order);
 }

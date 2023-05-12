@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.itheima.mapper.OrderMapper">
+    <!--新增订单-->
+    <insert id="insert" parameterType="com.itheima.pojo.Order">
+        insert into tb_order (user_id, name, price, num)
+        values (#{userId}, #{name}, #{price}, #{num})
+    </insert>
     <!--根据订单 id 查询订单-->
     <select id="queryById" resultType="com.itheima.pojo.Order" parameterType="java.lang.Long">
         select id, user_id, name, price, num

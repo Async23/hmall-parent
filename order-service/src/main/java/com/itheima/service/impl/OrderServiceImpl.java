@@ -1,8 +1,12 @@
 package com.itheima.service.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.itheima.client.UserClient;
 import com.itheima.mapper.OrderMapper;
 import com.itheima.service.OrderService;
+import org.apache.catalina.mbeans.UserMBean;
+import org.bouncycastle.crypto.tls.UserMappingType;
+import org.json.JSONObject;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,16 +37,23 @@ public class OrderServiceImpl implements OrderService {
     /**
      * 模拟下单方法
      *
-     * @param id
+     * @param order
      * @return
      */
     @Override
-    public String submit(Long id) {
-        Order order = orderMapper.queryById(id);
-        order.setUser(userClient.queryById(order.getUserId()));
+    public String submit(Order order) {
+        if (order == null || order.getUserId() == null || order.getPrice() == null) {
+            return "下单失败";
+        }
 
         rabbitTemplate.convertAndSend("hmall-parent-exchange", "order.user.submit", order);
 
-        return order.toString();
+        orderMapper.insert(order);
+
+        // Order order = orderMapper.queryById(id);
+        // order.setUser(userClient.queryById(order.getUserId()));
+
+
+        return JSON.toJSON(order).toString();
     }
 }

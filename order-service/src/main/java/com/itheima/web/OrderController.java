@@ -3,10 +3,7 @@ package com.itheima.web;
 import com.itheima.pojo.Order;
 import com.itheima.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/order")
@@ -28,11 +25,11 @@ public class OrderController {
     /**
      * 模拟下单方法
      *
-     * @param id
+     * @param order
      * @return
      */
-    @GetMapping("/submit/{id}")
-    public String submit(@PathVariable Long id) {
-        return orderService.submit(id);
+    @PostMapping("/submit")
+    public String submit(@RequestBody Order order) {
+        return orderService.submit(order);
     }
 }

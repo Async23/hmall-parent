@@ -13,4 +13,11 @@ public interface OrderMapper {
      * @return
      */
     Order queryById(Long id);
+
+    /**
+     * 新增订单
+     *
+     * @param order
+     */
+    void insert(Order order);
 }

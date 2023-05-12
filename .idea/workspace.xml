@@ -4,13 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb36ec71-85f8-4bd2-b047-d9e9516dbd02" name="Changes" comment="application.yml 配置文件回退，方便调试">
-      <change afterPath="$PROJECT_DIR$/feign-api/pom.xml" afterDir="false" />
+    <list default="true" id="eb36ec71-85f8-4bd2-b047-d9e9516dbd02" name="Changes" comment="feign-api 模块抽取完成">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/itheima/filter/AuthorizeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/itheima/filter/AuthorizeFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/itheima/client/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/itheima/client/UserClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/itheima/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/itheima/mapper/OrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/itheima/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/itheima/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/itheima/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/itheima/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/itheima/web/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/itheima/web/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/com/itheima/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/com/itheima/mapper/OrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/itheima/listen/MsgListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/itheima/listen/MsgListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/itheima/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/itheima/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/com/itheima/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/com/itheima/mapper/UserMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Mybatis Mapper" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -174,9 +180,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.UserServiceApplication" />
         <item itemvalue="Spring Boot.OrderServiceApplication" />
         <item itemvalue="Spring Boot.GatewayApplication" />
-        <item itemvalue="Spring Boot.UserServiceApplication" />
         <item itemvalue="JUnit.MapperTest.test" />
       </list>
     </recent_temporary>
@@ -193,7 +199,7 @@
       <workItem from="1683816447844" duration="1597000" />
       <workItem from="1683852739325" duration="643000" />
       <workItem from="1683878435343" duration="11609000" />
-      <workItem from="1683891851719" duration="3919000" />
+      <workItem from="1683891851719" duration="7125000" />
     </task>
     <task id="LOCAL-00001" summary="user-service 创建完成">
       <created>1683879506838</created>
@@ -286,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683895054760</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="feign-api 模块抽取完成">
+      <created>1683896533815</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1683896533815</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,6 +327,7 @@
     <MESSAGE value="注册 orderservice、userservice、gateway 到 dev 命名空间" />
     <MESSAGE value="迁移 orderservice 和 userservice 的 application.yml 中的所有内容到 nacos 配置中心中" />
     <MESSAGE value="application.yml 配置文件回退，方便调试" />
-    <option name="LAST_COMMIT_MESSAGE" value="application.yml 配置文件回退，方便调试" />
+    <MESSAGE value="feign-api 模块抽取完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="feign-api 模块抽取完成" />
   </component>
 </project>

@@ -1,16 +1,20 @@
 package com.itheima.listen;
 
 
+import com.itheima.mapper.UserMapper;
 import org.springframework.amqp.core.ExchangeTypes;
 import org.springframework.amqp.rabbit.annotation.Exchange;
 import org.springframework.amqp.rabbit.annotation.Queue;
 import org.springframework.amqp.rabbit.annotation.QueueBinding;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import com.itheima.pojo.Order;
 
 @Component
 public class MsgListener {
+    @Autowired
+    private UserMapper userMapper;
 
     @RabbitListener(bindings = @QueueBinding(
             exchange = @Exchange(name = "hmall-parent-exchange", type = ExchangeTypes.TOPIC),

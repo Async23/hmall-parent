@@ -12,4 +12,11 @@ public interface UserMapper {
      * @return
      */
     User queryById(Long id);
+
+    /**
+     * 新增用户
+     *
+     * @param user
+     */
+    void insert(User user);
 }
