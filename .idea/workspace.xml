@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb36ec71-85f8-4bd2-b047-d9e9516dbd02" name="Changes" comment="订单、用户接口单独调用成功">
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/itheima/client/UserClient.java" afterDir="false" />
+    <list default="true" id="eb36ec71-85f8-4bd2-b047-d9e9516dbd02" name="Changes" comment="gateway 网关配置完成">
+      <change afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/itheima/GatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/itheima/filter/AuthorizeFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/itheima/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/itheima/OrderServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/itheima/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/itheima/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/itheima/web/UserServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/itheima/web/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +68,6 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
     "last_opened_file_path": "D:/code/hmall-parent/user-service/src/main/resources/mapper",
@@ -86,6 +88,9 @@
     ]
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\code\hmall-parent\order-service\src\main\resources" />
@@ -93,6 +98,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\code\hmall-parent\user-service\src\main\resources\com\itheima" />
       <recent name="D:\code\hmall-parent\order-service\src\main\resources\com\itheima" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.itheima.filter" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -102,7 +110,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
+  <component name="RunManager" selected="Spring Boot.GatewayApplication">
     <configuration name="MapperTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="order-service" />
       <extension name="coverage">
@@ -115,6 +123,19 @@
       <option name="MAIN_CLASS_NAME" value="com.itheima.MapperTest" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itheima.GatewayApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itheima.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -147,6 +168,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.GatewayApplication" />
         <item itemvalue="Spring Boot.OrderServiceApplication" />
         <item itemvalue="Spring Boot.UserServiceApplication" />
         <item itemvalue="JUnit.MapperTest.test" />
@@ -164,7 +186,7 @@
       <workItem from="1683813103720" duration="991000" />
       <workItem from="1683816447844" duration="1597000" />
       <workItem from="1683852739325" duration="643000" />
-      <workItem from="1683878435343" duration="5628000" />
+      <workItem from="1683878435343" duration="6551000" />
     </task>
     <task id="LOCAL-00001" summary="user-service 创建完成">
       <created>1683879506838</created>
@@ -187,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683883774079</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feign 集成完成">
+      <created>1683884231239</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683884231239</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +227,8 @@
     <MESSAGE value="user-service 创建完成" />
     <MESSAGE value="order-service 创建完成" />
     <MESSAGE value="订单、用户接口单独调用成功" />
-    <option name="LAST_COMMIT_MESSAGE" value="订单、用户接口单独调用成功" />
+    <MESSAGE value="feign 集成完成" />
+    <MESSAGE value="gateway 网关配置完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="gateway 网关配置完成" />
   </component>
 </project>

@@ -1,0 +1,24 @@
+server:
+  port: 10010
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.200.130:8848
+    gateway:
+      routes:
+        - id: user-service-gateway
+          predicates:
+            - Path=/user/**
+          uri: lb://userservice
+        - id: order-service-gateway
+          predicates:
+            - Path=/order/**
+          uri: lb://orderservice
+logging:
+  level:
+    cn.itcast: debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
