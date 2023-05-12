@@ -17,6 +17,3 @@ spring:
           predicates:
             - Path=/order/**
           uri: lb://orderservice
-logging:
-  pattern:
-    dateformat: MM-dd HH:mm:ss:SSS
