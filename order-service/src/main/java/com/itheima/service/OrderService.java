@@ -18,5 +18,5 @@ public interface OrderService {
      * @param order
      * @return
      */
-    String submit(Order order);
+    Boolean submit(Order order);
 }

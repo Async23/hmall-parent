@@ -1,6 +1,7 @@
 package com.itheima.web;
 
 import com.itheima.pojo.Order;
+import com.itheima.result.Result;
 import com.itheima.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -18,8 +19,9 @@ public class OrderController {
      * @return
      */
     @GetMapping("/{id}")
-    public Order queryById(@PathVariable Long id) {
-        return orderService.queryById(id);
+    public Result<Order> queryById(@PathVariable Long id) {
+        Order order = orderService.queryById(id);
+        return Result.success(order);
     }
 
     /**
@@ -29,7 +31,10 @@ public class OrderController {
      * @return
      */
     @PostMapping("/submit")
-    public String submit(@RequestBody Order order) {
-        return orderService.submit(order);
+    public Result<String> submit(@RequestBody Order order) {
+        if (orderService.submit(order)) {
+            return Result.success();
+        }
+        return Result.error("下单失败");
     }
 }
