@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/user")
-public class UserServiceController {
+public class UserController {
     @Autowired
     private UserService userService;
 
@@ -20,7 +20,7 @@ public class UserServiceController {
      * @param id
      * @return
      */
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public User queryById(@PathVariable Long id) {
         return userService.queryById(id);
     }
