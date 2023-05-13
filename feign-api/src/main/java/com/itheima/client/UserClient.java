@@ -1,12 +1,10 @@
 package com.itheima.client;
 
+import com.itheima.pojo.User;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import com.itheima.pojo.User;
 
-@Component
 @FeignClient("userservice")
 public interface UserClient {
     /**
