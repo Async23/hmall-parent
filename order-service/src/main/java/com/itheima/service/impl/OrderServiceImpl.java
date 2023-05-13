@@ -27,7 +27,9 @@ public class OrderServiceImpl implements OrderService {
     public Order queryById(Long id) {
         Order order = orderMapper.queryById(id);
         order.setUser(userClient.queryById(order.getUserId()));
+
         rabbitTemplate.convertAndSend("hmall-parent-exchange", "order.user.submit", order);
+
         return order;
     }
 
@@ -47,11 +49,8 @@ public class OrderServiceImpl implements OrderService {
         rabbitTemplate.convertAndSend("hmall-parent-exchange", "order.user.submit", order);
 
         orderMapper.insert(order);
-
         // Order order = orderMapper.queryById(id);
         // order.setUser(userClient.queryById(order.getUserId()));
-
-
         return true;
     }
 }
