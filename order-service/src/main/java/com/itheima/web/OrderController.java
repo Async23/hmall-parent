@@ -30,11 +30,11 @@ public class OrderController {
      * @param order
      * @return
      */
-    @PostMapping("/submit")
+    /*@PostMapping("/submit")
     public Result<String> submit(@RequestBody Order order) {
         if (orderService.submit(order)) {
             return Result.success();
         }
         return Result.error("下单失败");
-    }
+    }*/
 }
